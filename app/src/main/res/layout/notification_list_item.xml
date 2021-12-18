@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="5dp"
+    app:cardCornerRadius="10dp"
+    android:layout_marginBottom="5dp"
+    android:paddingBottom="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_height="match_parent">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/notificationIv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@color/dark_grey"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/nameTV"
+            app:layout_constraintStart_toEndOf="@+id/notificationIv"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingStart="20dp"
+            android:text="Someone Viewed your profile"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/idTV"
+            app:layout_constraintStart_toEndOf="@+id/notificationIv"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingStart="20dp"
+            android:text="Here is your match"
+            android:textColor="@color/dark_grey"
+            android:textSize="11sp"
+            app:layout_constraintTop_toBottomOf="@+id/nameTV"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ageTV"
+
+            app:layout_constraintStart_toEndOf="@+id/notificationIv"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingStart="20dp"
+            android:text="Suggestion for the day"
+            android:textColor="@color/dark_grey"
+            android:textSize="11sp"
+            app:layout_constraintTop_toBottomOf="@+id/idTV"
+            tools:ignore="RtlSymmetry" />
+  <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dateTV"
+
+            app:layout_constraintStart_toEndOf="@+id/notificationIv"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:gravity="end"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:text="12 July 2021, 12:30 PM"
+            android:textColor="@color/dark_grey"
+            android:textSize="11sp"
+            app:layout_constraintTop_toBottomOf="@+id/ageTV"
+            tools:ignore="RtlSymmetry" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
+
