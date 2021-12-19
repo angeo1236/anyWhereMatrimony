@@ -15,15 +15,18 @@ class HomePage : AppCompatActivity() {
     lateinit var roundFaceRecyclerview : RecyclerView
     lateinit var myMatchesRv : RecyclerView
     lateinit var recentlyAddedRv : RecyclerView
+    lateinit var bottomMatchesRv : RecyclerView
 
     lateinit var myMatchesSeeAllTv : AppCompatTextView
     lateinit var recentlyAddedSeeAllTv : AppCompatTextView
+    lateinit var bottomMatchesSeeAllTv : AppCompatTextView
 
     lateinit var searchEdit : EditText
 
     var profileListAdapter = CommonListAdapter()
     var myMatchesAdapter = CommonListAdapter()
     var recentlyAddedAdapter = CommonListAdapter()
+    var bottomMatchesAdapter = CommonListAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,9 +35,11 @@ class HomePage : AppCompatActivity() {
         roundFaceRecyclerview = findViewById(R.id.roundFaceRecyclerview)
         myMatchesRv = findViewById(R.id.myMatchesRv)
         recentlyAddedRv = findViewById(R.id.recentlyAddedRv)
+        bottomMatchesRv = findViewById(R.id.bottomMatchesRv)
 
         myMatchesSeeAllTv = findViewById(R.id.myMatchesSeeAllTv)
         recentlyAddedSeeAllTv = findViewById(R.id.recentlyAddedSeeAllTv)
+        bottomMatchesSeeAllTv = findViewById(R.id.bottomMatchesSeeAllTv)
 
         searchEdit = findViewById(R.id.searchEdit)
 
@@ -48,9 +53,14 @@ class HomePage : AppCompatActivity() {
         recentlyAddedRv.layoutManager =  LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL ,false)
         recentlyAddedRv.adapter = recentlyAddedAdapter
 
+
+        bottomMatchesRv.layoutManager =  LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL ,false)
+        bottomMatchesRv.adapter = bottomMatchesAdapter
+
         val itemDecoration = ItemOffsetDecoration(this, R.dimen.list_margin)
         myMatchesRv.addItemDecoration(itemDecoration)
         recentlyAddedRv.addItemDecoration(itemDecoration)
+        bottomMatchesRv.addItemDecoration(itemDecoration)
 
         val list = ArrayList<String>()
         list.add("home_bride1")
@@ -73,10 +83,39 @@ class HomePage : AppCompatActivity() {
         list1.add("1")
         myMatchesAdapter.submitList(list1)
 
-        recentlyAddedAdapter.submitList(list1)
+
+        val list2 = ArrayList<String>()
+        list2.add("long1")
+        list2.add("long1")
+        list2.add("long1")
+        list2.add("long1")
+        list2.add("long1")
+        list2.add("long1")
+        list2.add("long1")
+
+        recentlyAddedAdapter.submitList(list2)
+
+
+        val list3 = ArrayList<String>()
+        list3.add("grid1")
+        list3.add("grid1")
+        list3.add("grid1")
+        list3.add("grid1")
+        list3.add("grid1")
+        list3.add("grid1")
+        list3.add("grid1")
+        list3.add("grid1")
+        list3.add("grid1")
+
+
+
+        bottomMatchesAdapter.submitList(list3)
 
         recentlyAddedSeeAllTv.setOnClickListener { goToProfileListing() }
         myMatchesSeeAllTv.setOnClickListener { goToProfileListing() }
+        bottomMatchesSeeAllTv.setOnClickListener { goToProfileListing() }
+        searchEdit.setOnClickListener { goToProfileListing() }
+
 
     }
     private fun goToProfileListing(){

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:elevation="5dp"
+    android:paddingBottom="5dp"
+    app:cardCornerRadius="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/pointerIv"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_margin="10dp"
+        android:src="@color/blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/titleTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/pointerIv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detailTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/pointerIv"
+        app:layout_constraintTop_toBottomOf="@+id/titleTv" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
