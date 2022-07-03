@@ -26,7 +26,7 @@ class CommonListAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         return when (viewType) {
             6 -> {
                 val itemView: View = LayoutInflater.from(parent.context)
-                    .inflate(R.layout.profile_grid_item, parent, false)
+                    .inflate(R.layout.profile_list_item, parent, false)
 
                 ViewHolder(itemView)
             }
@@ -56,7 +56,7 @@ class CommonListAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             }
             else -> {
                 val itemView: View = LayoutInflater.from(parent.context)
-                    .inflate(R.layout.profile_list_item, parent, false)
+                    .inflate(R.layout.profile_grid_item, parent, false)
 
                 ProfileViewHolder(itemView)
             }

@@ -2,28 +2,46 @@ package com.techxform.anywherematrimony.data
 
 import com.google.gson.annotations.SerializedName
 
-data class HomePageOutput (
+data class HomePageOutput(
     @SerializedName("UserDetails")
-    var userDetails: UserDetails?=null)
+    var userDetails: UserDetails? = null,
+    @SerializedName("RecentProfiles")
+    var recentProfiles: List<ProfileModel>? = null,
+    @SerializedName("MatchingProfiles")
+    var matchingProfiles: List<ProfileModel>? = null,
+    @SerializedName("LowerBanner")
+    var lowerBanner: List<BannerModel>? = null,
+    @SerializedName("UpperBanner")
+    var upperBanner: List<BannerModel>? = null,
+
+    )
 
 class UserDetails(
-    var id : String?,
-    var user_id : String?,
-    var candidate_name : String?,
-    var gender : String?,
-    var age : String?,
-    var height : String?,
-    var weight : String?,
-    var religion : String?,
-    var caste : String?,
-    var education : String?,
-    var image : String?,
-    var user_name : String?,
-    var added_date : String?,
-    var mobile : String?,
-    var email : String?,
-    var status : String?,
-    var created_at : String?
+    var id: String?,
+    var user_id: String?,
+    var candidate_name: String?,
+    var gender: String?,
+    var age: String?,
+    var height: String?,
+    var weight: String?,
+    var religion: String?,
+    var caste: String?,
+    var education: String?,
+    var image: String?,
+    var user_name: String?,
+    var added_date: String?,
+    var mobile: String?,
+    var email: String?,
+    var status: String?,
+    var created_at: String?
+)
+
+class BannerModel(
+    var id: String?,
+    var advtisement_id: String?,
+    var image: String?,
+    var position: String?,
+    var created_at: String?
 )
 /*
 "UserDetails": {
@@ -44,4 +62,13 @@ class UserDetails(
     "email": "deepak@gmail.com",
     "status": "1",
     "created_at": "2021-12-11 15:00:18"
+}*/
+
+/*
+{
+    "id": "7",
+    "advtisement_id": "3",
+    "image": "https://nearu.live/Anywhere_matrimony/assets/images/advertisement/e2283192105f62492470713cd9b4172e.jpg",
+    "position": "0",
+    "created_at": "2021-05-19 15:42:08"
 }*/

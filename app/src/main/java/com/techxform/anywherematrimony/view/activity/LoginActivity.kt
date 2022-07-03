@@ -39,7 +39,6 @@ class LoginActivity : BaseActivity() {
                 dataCaching.setEmail(loginOutput.email)
                 dataCaching.setUserId(loginOutput.user_id)
                 dataCaching.setUserImage(loginOutput.image)
-                dataCaching.setUserName(loginOutput.user_name)
 
                 val intent = Intent(this, HomePage::class.java)
                 startActivity(intent)

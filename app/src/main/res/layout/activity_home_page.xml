@@ -236,6 +236,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="My Matches"
+                    android:visibility="gone"
                     android:textColor="@color/black"
                     android:textSize="10sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -247,6 +248,7 @@
                     android:layout_height="wrap_content"
                     android:text="See All"
                     android:textColor="@color/black"
+                    android:visibility="gone"
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/recentlyAddedRv" />
@@ -256,6 +258,7 @@
                     android:id="@+id/bottomMatchesRv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:visibility="gone"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

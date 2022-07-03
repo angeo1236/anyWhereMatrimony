@@ -14,4 +14,6 @@
     <color name="red">#ff0000</color>
     <color name="btn_gradient_blue">#45599E</color>
     <color name="btn_gradient_purple">#BA237F</color>
+    <color name="transparent">#00000000</color>
+    <color name="nav_upper_bg">#0c73ae</color>
 </resources>
