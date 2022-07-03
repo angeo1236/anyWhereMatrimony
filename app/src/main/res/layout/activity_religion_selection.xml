@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_religion_selection"
+        tools:context=".view.activity.ReligionSelection">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/logo_iv"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/top_img_iv"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/top_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_iv" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/welcome_td"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to"
+            android:textColor="@color/grey"
+            android:textSize="20sp"
+            android:fontFamily="@font/opensans_semibold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_img_iv" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/logo_txt_td"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anywhere Matrimony"
+            android:textColor="@color/dark_grey"
+            android:textSize="24sp"
+            android:fontFamily="@font/poppins_semibold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcome_td" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/religionRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_txt_td"
+            tools:itemCount="3"
+            tools:listitem="@layout/religion_selection_list_item" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

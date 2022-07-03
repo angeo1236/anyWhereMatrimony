@@ -1,9 +1,12 @@
-package com.techxform.anywherematrimony
+package com.techxform.anywherematrimony.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.techxform.anywherematrimony.CommonListAdapter
+import com.techxform.anywherematrimony.CommonPairAdapter
+import com.techxform.anywherematrimony.R
 
 class SingleProfileView : AppCompatActivity() {
     lateinit var detailsRv: RecyclerView

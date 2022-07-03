@@ -10,5 +10,8 @@
     <color name="blue">#0D6BA8</color>
     <color name="light_grey">#E1E1E1</color>
     <color name="dark_grey">#4C4B4B</color>
+    <color name="grey">#7E7E7E</color>
     <color name="red">#ff0000</color>
+    <color name="btn_gradient_blue">#45599E</color>
+    <color name="btn_gradient_purple">#BA237F</color>
 </resources>

@@ -1,10 +1,13 @@
-package com.techxform.anywherematrimony
+package com.techxform.anywherematrimony.view.activity
 
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.techxform.anywherematrimony.CommonListAdapter
+import com.techxform.anywherematrimony.ItemOffsetDecoration
+import com.techxform.anywherematrimony.R
 
 
 class ProfileListing : BaseActivity() {

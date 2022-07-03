@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            tools:context=".view.activity.SignUpActivity">
+
+            <TextView
+                android:id="@+id/countryLabelTv"
+                style="@style/signUpTitleText"
+                android:text="Country"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/countrySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:inputType="textPassword"
+                android:text="1234"
+                app:layout_constraintTop_toBottomOf="@+id/countryLabelTv" />
+
+            <TextView
+                android:id="@+id/stateLabelTv"
+                style="@style/signUpTitleText"
+                android:text="State"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/countrySpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/stateSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/stateLabelTv" />
+
+            <TextView
+                android:id="@+id/districtLabelTv"
+                style="@style/signUpTitleText"
+                android:text="District"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stateSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/districtSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/districtLabelTv" />
+
+
+            <TextView
+                android:id="@+id/placeLabelTv"
+                style="@style/signUpTitleText"
+                android:text="Place"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/districtSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/placeSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/placeLabelTv" />
+
+
+            <TextView
+                android:id="@+id/usernameLabelTv"
+                style="@style/signUpTitleText"
+                android:text="Username"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/placeSpinner" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/usernameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="textPersonName"
+                android:text="deepa@gmail.com"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/usernameLabelTv" />
+
+            <TextView
+                android:id="@+id/passwordLabelTv"
+                style="@style/signUpTitleText"
+                android:text="Password"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/usernameEt" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/passwordEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:inputType="textPassword"
+                android:text="1234"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintTop_toBottomOf="@+id/passwordLabelTv" />
+
+            <RadioButton
+                android:id="@+id/termsRb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginEnd="50dp"
+                android:text="I have read and agreed to the T&amp;C and provacy policy"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/passwordEt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/signUpBtn"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/poppins_regular"
+                android:background="@drawable/blue_red_gradient_curved_bg"
+                android:gravity="center"
+                android:text="Sign Up"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/termsRb" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/alreadyBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:background="@drawable/blue_red_gradient_curved_bg"
+                android:gravity="center"
+                android:minWidth="200dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="Already have an account, login"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signUpBtn" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

@@ -83,12 +83,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="@string/name_dummy"
-                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="14sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
                         android:text="27 yrs, 175cm, Hindu - Nair\nSDF1122233445\nUpdated 1 week ago"
                         android:textSize="14sp" />
 
@@ -97,7 +99,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="About Him"
-                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="13sp"
                         android:textStyle="bold" />
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -111,7 +114,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Religious Background"
-                        android:textSize="16sp"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins_regular"
                         android:textStyle="bold" />
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -125,7 +129,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Professional Background"
-                        android:textSize="16sp"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins_regular"
                         android:textStyle="bold" />
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -139,7 +144,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="About his loved ones"
-                        android:textSize="16sp"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins_regular"
                         android:textStyle="bold" />
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -152,8 +158,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_regular"
                         android:text="Profile Verification"
-                        android:textSize="16sp"
+                        android:textSize="13sp"
                         android:textStyle="bold" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -179,7 +186,8 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:text="Mobile Number Verified"
-                            android:textSize="18sp"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/poppins_regular"
                             android:textStyle="bold"
                             app:layout_constraintStart_toEndOf="@+id/lockIv"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -188,7 +196,8 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:text="Contact details have been verified"
-                            android:textSize="16sp"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/poppins_regular"
                             app:layout_constraintStart_toEndOf="@+id/lockIv"
                             app:layout_constraintTop_toBottomOf="@+id/verificationTopTV" />
 
@@ -199,7 +208,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="His hobbies and interests"
-                        android:textSize="16sp"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins_regular"
                         android:textStyle="bold" />
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -214,7 +224,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="See how well your profile matches with his preferences"
-                        android:textSize="22sp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/poppins_regular"
                         android:textStyle="bold" />
 
                     <TextView
@@ -222,7 +233,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="His basic preferences"
-                        android:textSize="16sp"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins_regular"
                         android:textStyle="bold" />
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -235,8 +247,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_regular"
                         android:text="His religious preferences"
-                        android:textSize="16sp"
+                        android:textSize="13sp"
                         android:textStyle="bold" />
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -248,9 +261,10 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
                         android:layout_marginTop="10dp"
                         android:text="His professional preferences"
-                        android:textSize="16sp"
+                        android:textSize="13sp"
                         android:textStyle="bold" />
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -264,7 +278,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="His location preferences"
-                        android:textSize="16sp"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins_regular"
                         android:textStyle="bold" />
 
                     <androidx.recyclerview.widget.RecyclerView

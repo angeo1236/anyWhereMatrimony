@@ -35,6 +35,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:maxLines="1"
+            android:fontFamily="@font/poppins_regular"
             android:paddingStart="20dp"
             android:text="Someone Viewed your profile"
             android:textColor="@color/black"
@@ -44,33 +45,21 @@
             tools:ignore="RtlSymmetry" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/idTV"
+            android:id="@+id/notificationLine1Tv"
             app:layout_constraintStart_toEndOf="@+id/notificationIv"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:maxLines="1"
+            android:lines="2"
             android:paddingStart="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:text="Here is your match"
             android:textColor="@color/dark_grey"
             android:textSize="11sp"
             app:layout_constraintTop_toBottomOf="@+id/nameTV"
             tools:ignore="RtlSymmetry" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/ageTV"
 
-            app:layout_constraintStart_toEndOf="@+id/notificationIv"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:paddingStart="20dp"
-            android:text="Suggestion for the day"
-            android:textColor="@color/dark_grey"
-            android:textSize="11sp"
-            app:layout_constraintTop_toBottomOf="@+id/idTV"
-            tools:ignore="RtlSymmetry" />
   <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/dateTV"
 
@@ -81,11 +70,12 @@
             android:maxLines="1"
             android:gravity="end"
             android:paddingEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:paddingStart="20dp"
             android:text="12 July 2021, 12:30 PM"
             android:textColor="@color/dark_grey"
             android:textSize="11sp"
-            app:layout_constraintTop_toBottomOf="@+id/ageTV"
+            app:layout_constraintTop_toBottomOf="@+id/notificationLine1Tv"
             tools:ignore="RtlSymmetry" />
 
 

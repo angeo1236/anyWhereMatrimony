@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            tools:context=".view.activity.SignUpActivity">
+
+            <TextView
+                android:id="@+id/loginLabelTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:fontFamily="@font/pippins_bold"
+                android:text="Sign Up"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nameLabelTv"
+                style="@style/signUpTitleText"
+                android:text="Bride/Groom name"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginLabelTv" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/nameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="textPersonName|textCapWords"
+                android:text="deepa"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/nameLabelTv" />
+
+
+            <TextView
+                android:id="@+id/profileCreatedLabelTv"
+                style="@style/signUpTitleText"
+                android:text="Profile created by"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameEt" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/profileCreatedSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:inputType="textPassword"
+                android:text="1234"
+                app:layout_constraintTop_toBottomOf="@+id/profileCreatedLabelTv" />
+
+            <TextView
+                android:id="@+id/emailLabelTv"
+                style="@style/signUpTitleText"
+                android:text="Email ID"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/emailEt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:inputType="textEmailAddress"
+                android:text="abc@mail.com"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/emailLabelTv" />
+
+            <TextView
+                android:id="@+id/mobileLabelTv"
+                style="@style/signUpTitleText"
+                android:text="Mobile Number"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emailEt" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/mobileEt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:inputType="phone"
+                android:text="31242423423"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintTop_toBottomOf="@+id/mobileLabelTv" />
+
+            <LinearLayout
+                android:id="@+id/genderLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mobileEt">
+
+                <TextView
+                    android:id="@+id/genderLabelTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/blue"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mobileEt" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toEndOf="@+id/genderLabelTv"
+                    app:layout_constraintTop_toBottomOf="@+id/mobileEt"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/maleRb"
+                        android:checked="true"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/femaleRb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="12sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dobLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/genderLayout">
+
+                <TextView
+                    android:id="@+id/dobLabelTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D.O.B"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/blue"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mobileEt" />
+
+                <EditText
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/religionLabelTv"
+                style="@style/signUpTitleText"
+                android:text="Religion"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dobLayout" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/religionSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/religionLabelTv" />
+
+            <TextView
+                android:id="@+id/castLabelTv"
+                style="@style/signUpTitleText"
+                android:text="Cast/Denomination"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/religionSpinner" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/castSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/castLabelTv" />
+
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/nextBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/blue_curved_bg"
+                android:gravity="center"
+                android:text=">"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/castSpinner" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
+
+
+
+

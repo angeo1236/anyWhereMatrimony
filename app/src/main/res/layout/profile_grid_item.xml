@@ -3,7 +3,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="180dp"
+    android:layout_width="160dp"
     android:layout_height="wrap_content"
     android:background="@drawable/white_small_curved_bg"
     android:layout_marginBottom="5dp"
@@ -20,7 +20,7 @@
             android:id="@+id/profileIV"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="180dp"
             android:src="@drawable/man_dummy"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,6 +48,7 @@
             android:maxLines="1"
             android:paddingStart="20dp"
             android:paddingTop="5dp"
+            android:fontFamily="@font/poppins_regular"
             android:text="Akshay Santhosh"
             android:textColor="@color/black"
             android:textSize="11sp"
@@ -63,6 +64,7 @@
             android:paddingStart="20dp"
             android:text="SDF112233445"
             android:textColor="@color/dark_grey"
+            android:fontFamily="@font/poppins_regular"
             android:textSize="11sp"
             app:layout_constraintTop_toBottomOf="@+id/nameTV"
             tools:ignore="RtlSymmetry" />
@@ -74,6 +76,7 @@
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:paddingStart="20dp"
+            android:fontFamily="@font/poppins_regular"
             android:text="29 Yrs, 175cm, Hindu - Nair"
             android:textColor="@color/dark_grey"
             android:textSize="11sp"
@@ -88,6 +91,7 @@
             android:paddingStart="20dp"
             android:text="M.Sc(Computer Science)"
             android:textColor="@color/dark_grey"
+            android:fontFamily="@font/poppins_regular"
             android:textSize="11sp"
             app:layout_constraintTop_toBottomOf="@+id/ageTV"
             tools:ignore="RtlSymmetry" />
@@ -101,6 +105,7 @@
             android:text="Added date : 4th June 2021"
             android:textColor="@color/dark_grey"
             android:textSize="11sp"
+            android:fontFamily="@font/poppins_regular"
             app:layout_constraintTop_toBottomOf="@+id/educationalTV"
             tools:ignore="RtlSymmetry" />
 
