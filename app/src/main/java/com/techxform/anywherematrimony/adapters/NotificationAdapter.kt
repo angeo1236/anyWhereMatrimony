@@ -1,14 +1,12 @@
-package com.techxform.anywherematrimony
+package com.techxform.anywherematrimony.adapters
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
+import com.techxform.anywherematrimony.R
 import com.techxform.anywherematrimony.data.NotificationModel
-import com.techxform.anywherematrimony.utils.AppPreferences
-import com.techxform.anywherematrimony.view.activity.MainActivity
 import java.util.ArrayList
 
 class NotificationAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {

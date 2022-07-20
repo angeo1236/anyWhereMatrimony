@@ -5,12 +5,8 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.techxform.anywherematrimony.R
-import com.techxform.anywherematrimony.ReligionSelectionAdapter
-import com.techxform.anywherematrimony.databinding.ActivityHomePageBinding
+import com.techxform.anywherematrimony.adapters.ReligionSelectionAdapter
 import com.techxform.anywherematrimony.databinding.ActivityReligionSelectionBinding
-import com.techxform.anywherematrimony.databinding.ReligionSelectionListItemBinding
-import com.techxform.anywherematrimony.viewmodel.AuthViewModel
-import org.koin.android.ext.android.inject
 
 class ReligionSelection : AppCompatActivity() {
     private lateinit var databinding: ActivityReligionSelectionBinding

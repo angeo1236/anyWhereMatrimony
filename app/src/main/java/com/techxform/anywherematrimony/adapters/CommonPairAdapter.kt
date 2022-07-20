@@ -1,11 +1,11 @@
-package com.techxform.anywherematrimony
+package com.techxform.anywherematrimony.adapters
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
+import com.techxform.anywherematrimony.R
 import java.util.ArrayList
 
 

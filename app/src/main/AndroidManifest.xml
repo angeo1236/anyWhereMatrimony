@@ -15,8 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AnyWhereMatrimony">
         <activity
+            android:name=".view.activity.InterestListPage"
+            android:exported="false" />
+        <activity
             android:name=".view.activity.ReligionSelection"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,11 +1,12 @@
-package com.techxform.anywherematrimony;
+package com.techxform.anywherematrimony.adapters;
+
+import static com.techxform.anywherematrimony.view.activity.ProfileListing.IS_IN_WISHLIST;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -15,7 +16,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.techxform.anywherematrimony.R;
 import com.techxform.anywherematrimony.data.NavListModel;
+import com.techxform.anywherematrimony.view.activity.InterestListPage;
+import com.techxform.anywherematrimony.view.activity.ProfileListing;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,13 +61,14 @@ public class NavListAdapter extends RecyclerView.Adapter<NavListAdapter.ViewHold
 
         holder.full_layout.setOnClickListener(v -> {
             drawerLayout.closeDrawer(GravityCompat.START);
-            /*if (position == 0) {
-                Intent intent = new Intent(activity1, ProfilePage.class);
-                activity1.startActivity(intent);
-            } else if (position == 1) {
-                Intent intent = new Intent(activity1, MyBookingsPage.class);
+            if (position == 1 ) {
+                Intent intent = new Intent(activity1, InterestListPage.class);
                 activity1.startActivity(intent);
             } else if (position == 2) {
+                Intent intent = new Intent(activity1, ProfileListing.class);
+                intent.putExtra(IS_IN_WISHLIST,true);
+                activity1.startActivity(intent);
+            } /*else if (position == 2) {
                 Intent intent = new Intent(activity1, NotificationsPage.class);
                 activity1.startActivity(intent);
             } else if (position == 3) {

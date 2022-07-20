@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.techxform.anywherematrimony.*
+import com.techxform.anywherematrimony.adapters.CommonListAdapter
+import com.techxform.anywherematrimony.adapters.NavListAdapter
 import com.techxform.anywherematrimony.adapters.ProfileListingType
 import com.techxform.anywherematrimony.adapters.ProfilesListAdapter
 import com.techxform.anywherematrimony.data.NavListModel
@@ -141,7 +143,12 @@ class HomePage : BaseActivity() {
         navListModels.add(NavListModel("Logout", R.drawable.like_icon))
 
 
-        val navListAdapter = NavListAdapter(navListModels, this, dataBinding.drawerLayout)
+        val navListAdapter =
+            NavListAdapter(
+                navListModels,
+                this,
+                dataBinding.drawerLayout
+            )
         val mLayoutManager1: RecyclerView.LayoutManager =
             LinearLayoutManager(applicationContext, RecyclerView.VERTICAL, false)
         dataBinding.navmenuRecyclerview.layoutManager = mLayoutManager1

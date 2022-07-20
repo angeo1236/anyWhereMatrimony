@@ -7,10 +7,7 @@ import com.orhanobut.logger.Logger
 import com.orhanobut.logger.PrettyFormatStrategy
 import com.techxform.anywherematrimony.utils.AppPreferences
 import com.techxform.anywherematrimony.utils.DataCaching
-import com.techxform.anywherematrimony.viewmodel.AuthViewModel
-import com.techxform.anywherematrimony.viewmodel.FiltersViewModel
-import com.techxform.anywherematrimony.viewmodel.HomePageViewModel
-import com.techxform.anywherematrimony.viewmodel.NotificationViewModel
+import com.techxform.anywherematrimony.viewmodel.*
 import org.koin.android.ext.koin.androidApplication
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -57,5 +54,6 @@ val authModule = module {
     viewModel { FiltersViewModel() }
     viewModel { HomePageViewModel(get()) }
     viewModel { NotificationViewModel(get()) }
+    viewModel { InterestViewModel(get()) }
 
 }
