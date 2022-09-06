@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<layout>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,15 +9,15 @@
     tools:ignore="RtlHardcoded">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/flexible.example.appbar"
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/flexible.example.collapsing"
+            android:id="@+id/collapsingToolbar"
             android:layout_width="match_parent"
-            android:layout_height="420dp"
+            android:layout_height="@dimen/_300sdp"
             android:theme="@style/CustomToolbarTheme"
             app:contentScrim="?colorPrimary"
             app:expandedTitleMarginBottom="94dp"
@@ -26,26 +26,26 @@
             app:title="@string/name_dummy">
 
             <ImageView
+                android:id="@+id/profileImage"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white"
                 android:scaleType="fitXY"
-                android:src="@drawable/man_dummy" />
+                tools:src="@drawable/man_dummy" />
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/flexible.example.toolbar"
+                android:id="@+id/normalToolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="@null"
                 app:layout_collapseMode="pin">
 
                 <androidx.constraintlayout.utils.widget.ImageFilterView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:id="@+id/backArrow"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
                     android:src="@drawable/left_arrow" />
             </androidx.appcompat.widget.Toolbar>
-
-            <!--   style="@style/ToolBarWithNavigationBack"-->
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
@@ -79,6 +79,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/candidateNameTv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -228,6 +229,27 @@
                         android:fontFamily="@font/poppins_regular"
                         android:textStyle="bold" />
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/myPhotoImageView"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_80sdp"/>
+                        <View
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_5sdp"
+                            android:background="@color/grey"/>
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/otherPhotoImageView"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_80sdp"/>
+
+                    </LinearLayout>
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -288,8 +310,21 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp" />
 
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        android:id="@+id/sendInterestBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:gravity="center"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/white"
+                        android:text="Send Interest"
+                        android:background="@drawable/green_curved"
+                        />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

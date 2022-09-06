@@ -1,7 +1,11 @@
 package com.techxform.anywherematrimony.view.activity
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.widget.Toast
 import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -36,9 +40,11 @@ class HomePage : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        dataBinding = DataBindingUtil.setContentView(this, R.layout.base_navigation_layout)
+        val inflater : LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        dataBinding = DataBindingUtil.inflate(inflater,R.layout.base_navigation_layout, frameContainer, true)
 
         populateUserData()
+        showProgress()
         homePageViewModel.getHomePageData()
 
         dataBinding.homePageLayout.roundFaceRecyclerview.layoutManager =  LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL ,false)
@@ -97,21 +103,71 @@ class HomePage : BaseActivity() {
         dataBinding.homePageLayout.navbarIv.setOnClickListener {
             dataBinding.drawerLayout.openDrawer(GravityCompat.START)
         }
-
+        dataBinding.profileImgvw.setOnClickListener{
+            startActivity(Intent(this,CompleteRegistration::class.java))
+        }
     }
 
     private fun subscribeData(){
         homePageViewModel.homePageOutput.observe(this) {
+            hideProgress()
+            if(it == null){
+                Toast.makeText(this,"Error loading data",Toast.LENGTH_SHORT).show()
+                return@observe
+            }
             dataCaching.setUserName(it.userDetails?.candidate_name.safeGet())
             dataCaching.setEmail(it.userDetails?.email.safeGet())
             dataCaching.setUserImage(it.userDetails?.image.safeGet())
-            (it?.recentProfiles as? java.util.ArrayList<ProfileModel>)?.let{ recentProfilesAll ->
+            dataCaching.setGenderId(it.userDetails?.gender.safeGet())
+            (it.recentProfiles as? java.util.ArrayList<ProfileModel>)?.let{ recentProfilesAll ->
                 recentlyAddedAdapter.submitList(recentProfilesAll)
+                if(recentProfilesAll.isEmpty()){
+                    dataBinding.homePageLayout.recentlyAddedSeeAllTv.visibility=View.GONE
+                    dataBinding.homePageLayout.recentlyAddedTv.visibility=View.GONE
+                }else{
+                    dataBinding.homePageLayout.recentlyAddedSeeAllTv.visibility=View.VISIBLE
+                    dataBinding.homePageLayout.recentlyAddedTv.visibility=View.VISIBLE
+                }
             }
 
-            (it?.matchingProfiles as? java.util.ArrayList<ProfileModel>)?.let{ myMatches ->
+            (it.matchingProfiles as? java.util.ArrayList<ProfileModel>)?.let{ myMatches ->
                 myMatchesAdapter.submitList(myMatches)
+                if(myMatches.isEmpty()){
+                    dataBinding.homePageLayout.myMatchesSeeAllTv.visibility=View.GONE
+                    dataBinding.homePageLayout.myMatchesTv.visibility=View.GONE
+                }else{
+                    dataBinding.homePageLayout.myMatchesSeeAllTv.visibility=View.VISIBLE
+                    dataBinding.homePageLayout.myMatchesTv.visibility=View.VISIBLE
+                }
             }
+
+            it.upperBanner?.firstOrNull()?.let { bannerModel ->
+                val options: RequestOptions = RequestOptions()
+                    .centerCrop()
+                    .placeholder(R.drawable.image_placeholder)
+                    .error(R.drawable.image_placeholder)
+
+                Glide.with(applicationContext).load(bannerModel.image.safeGet()).apply(options)
+                    .into(dataBinding.homePageLayout.upperBannerView)
+                dataBinding.homePageLayout.upperBannerLayout.visibility = View.VISIBLE
+
+            }?: run {
+                dataBinding.homePageLayout.upperBannerLayout.visibility = View.GONE
+            }
+
+            it?.lowerBanner?.firstOrNull()?.let {bannerModel ->
+                val options: RequestOptions = RequestOptions()
+                    .centerCrop()
+                    .placeholder(R.drawable.image_placeholder)
+                    .error(R.drawable.image_placeholder)
+
+                Glide.with(applicationContext).load(bannerModel.image.safeGet()).apply(options)
+                    .into(dataBinding.homePageLayout.lowerBannerView)
+                dataBinding.homePageLayout.lowerBannerLayout.visibility = View.VISIBLE
+            }?: run {
+                dataBinding.homePageLayout.lowerBannerLayout.visibility = View.GONE
+            }
+
             populateUserData()
         }
     }
@@ -140,6 +196,7 @@ class HomePage : BaseActivity() {
         navListModels.add(NavListModel("Wishlist", R.drawable.like_icon))
         navListModels.add(NavListModel("Profile settings", R.drawable.like_icon))
         navListModels.add(NavListModel("Upload photos", R.drawable.like_icon))
+        navListModels.add(NavListModel("Magazine", R.drawable.like_icon))
         navListModels.add(NavListModel("Logout", R.drawable.like_icon))
 
 

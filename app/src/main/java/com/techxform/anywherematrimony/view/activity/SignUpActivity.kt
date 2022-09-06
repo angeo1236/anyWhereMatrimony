@@ -1,6 +1,8 @@
 package com.techxform.anywherematrimony.view.activity
 
+import android.content.Context
 import android.os.Bundle
+import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -11,7 +13,7 @@ import com.techxform.anywherematrimony.view.fragment.SignUpFragmentBasicOne
 import com.techxform.anywherematrimony.view.fragment.SignUpFragmentBasicTwo
 
 
-class SignUpActivity : AppCompatActivity() {
+class SignUpActivity : BaseActivity() {
     private lateinit var databinding: ActivitySignUpBinding
 
     private lateinit var firstFragment : SignUpFragmentBasicOne
@@ -19,7 +21,8 @@ class SignUpActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        databinding = DataBindingUtil.setContentView(this, R.layout.activity_sign_up)
+        val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        databinding = DataBindingUtil.inflate(inflater,R.layout.activity_sign_up,frameContainer,true)
 
             firstFragment = SignUpFragmentBasicOne()
             secondFragment = SignUpFragmentBasicTwo()

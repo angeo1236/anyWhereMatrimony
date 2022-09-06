@@ -11,6 +11,7 @@ private const val EMAIL = "email"
 private const val USER_NAME = "userName"
 private const val USER_IMAGE = "userImage"
 private const val RELIGION_ID = "religionId"
+private const val GENDER_ID = "genderId"
 
 open class DataCaching constructor(var context: Context) {
 
@@ -72,6 +73,16 @@ open class DataCaching constructor(var context: Context) {
     fun setReligionId(religionId: String) {
         val sp = context.getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE)
         sp.edit().putString(RELIGION_ID, religionId).apply()
+    }
+
+    fun getGenderId(): String? {
+        val sp = context.getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE)
+        return sp.getString(GENDER_ID, null)
+    }
+
+    fun setGenderId(genderId: String) {
+        val sp = context.getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE)
+        sp.edit().putString(GENDER_ID, genderId).apply()
     }
 
 }

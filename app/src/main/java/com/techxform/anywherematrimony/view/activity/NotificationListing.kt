@@ -12,7 +12,7 @@ import com.techxform.anywherematrimony.data.NotificationModel
 import com.techxform.anywherematrimony.viewmodel.NotificationViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class NotificationListing : BaseActivity() {
+class NotificationListing : BaseActivity(true) {
     private val notificationListAdapter = NotificationAdapter()
     lateinit var profileListRv : RecyclerView
     private val notificationViewModel: NotificationViewModel by viewModel()
@@ -21,7 +21,6 @@ class NotificationListing : BaseActivity() {
         super.onCreate(savedInstanceState)
         setTitle("Notifications")
         val inflater : LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-
         inflater.inflate(R.layout.activity_notification_listing, frameContainer, true)
         profileListRv = findViewById(R.id.notification_list_rv)
         profileListRv.layoutManager = LinearLayoutManager(this)

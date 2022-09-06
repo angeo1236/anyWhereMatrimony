@@ -3,4 +3,6 @@
     <dimen name="logo_height">100dp</dimen>
     <dimen name="list_margin">5dp</dimen>
     <dimen name="appHeaderHeight">200dp</dimen>
+    <dimen name="font_size">15sp</dimen>
+    <dimen name="margin_basic_25">0.25dp</dimen>
 </resources>

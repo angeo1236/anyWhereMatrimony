@@ -54,7 +54,7 @@
             android:layout_marginStart="50dp"
             android:layout_marginEnd="50dp"
             android:inputType="textPersonName"
-            android:text="arjun@gmail.com"
+            android:text="anju123@gmail.com"
             app:layout_constraintTop_toBottomOf="@+id/userIdLabelTv"
             android:fontFamily="@font/roboto_regular"/>
 
@@ -80,7 +80,7 @@
             android:layout_marginStart="50dp"
             android:layout_marginEnd="50dp"
             android:inputType="textPassword"
-            android:text="arjun123"
+            android:text="anju123"
             app:layout_constraintTop_toBottomOf="@+id/passwordLabelTv" />
 
         <androidx.appcompat.widget.AppCompatTextView

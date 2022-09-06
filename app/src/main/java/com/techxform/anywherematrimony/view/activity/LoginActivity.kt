@@ -1,7 +1,9 @@
 package com.techxform.anywherematrimony.view.activity
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.techxform.anywherematrimony.R
@@ -19,7 +21,8 @@ class LoginActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        databinding = DataBindingUtil.setContentView(this, R.layout.activity_login)
+        val inflater : LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        databinding = DataBindingUtil.inflate(inflater,R.layout.activity_login, frameContainer, true)
 
 
         databinding.loginBtn.setOnClickListener {

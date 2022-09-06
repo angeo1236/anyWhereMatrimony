@@ -182,17 +182,18 @@
                     tools:listitem="@layout/profile_list_item" />
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/banner1CardView"
+                    android:id="@+id/upperBannerLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="10dp"
                     android:layout_marginBottom="5dp"
                     android:elevation="5dp"
                     app:cardCornerRadius="10dp"
-                    app:layout_constraintTop_toBottomOf="@+id/myMatchesRv">
+                    app:layout_constraintTop_toBottomOf="@+id/myMatchesRv"
+                    android:visibility="gone">
 
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/banner1ImageView"
+                        android:id="@+id/upperBannerView"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
                         android:scaleType="fitXY"
@@ -204,11 +205,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:text="Recently Added"
                     android:textColor="@color/black"
                     android:textSize="10sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/banner1CardView" />
+                    app:layout_constraintTop_toBottomOf="@+id/upperBannerLayout" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/recentlyAddedSeeAllTv"
@@ -219,7 +221,7 @@
                     android:textColor="@color/black"
                     android:textSize="10sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/banner1CardView" />
+                    app:layout_constraintTop_toBottomOf="@+id/upperBannerLayout" />
 
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -267,19 +269,23 @@
                     tools:listitem="@layout/profile_list_item" />
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/lowerBannerLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="10dp"
                     android:layout_marginBottom="5dp"
                     android:elevation="5dp"
                     app:cardCornerRadius="10dp"
-                    app:layout_constraintTop_toBottomOf="@+id/bottomMatchesRv">
+                    app:layout_constraintTop_toBottomOf="@+id/bottomMatchesRv"
+                    android:visibility="gone">
 
                     <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/lowerBannerView"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
                         android:scaleType="fitXY"
-                        android:src="@drawable/banner_2" />
+                        android:src="@drawable/banner_2"
+                        />
                 </androidx.cardview.widget.CardView>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>

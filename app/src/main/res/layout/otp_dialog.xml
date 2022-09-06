@@ -33,7 +33,7 @@
         app:width="40dp"
         app:bar_enabled="true"
         app:bar_height="2dp"
-        app:length="6"
+        app:length="5"
         app:otp_box_background="@drawable/blue_bg_chips"
         app:otp_text_size="@dimen/_14ssp"
         app:otp_box_background_success="@color/grey"
@@ -43,6 +43,7 @@
         />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submitBtn"
         app:layout_constraintTop_toBottomOf="@+id/otpView"
         android:layout_width="@dimen/_120sdp"
         app:layout_constraintStart_toStartOf="parent"

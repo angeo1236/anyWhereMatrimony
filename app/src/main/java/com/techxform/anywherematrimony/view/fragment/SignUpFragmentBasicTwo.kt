@@ -1,6 +1,8 @@
 package com.techxform.anywherematrimony.view.fragment
 
+import `in`.aabhasjindal.otptextview.OtpTextView
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -11,13 +13,16 @@ import android.view.Window
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.appcompat.widget.AppCompatButton
 import androidx.lifecycle.Observer
 import com.techxform.anywherematrimony.R
 import com.techxform.anywherematrimony.data.FilterItem
 import com.techxform.anywherematrimony.databinding.FragmentSignUpBasicOneBinding
 import com.techxform.anywherematrimony.databinding.FragmentSignUpBasicTwoBinding
 import com.techxform.anywherematrimony.extensions.empty
+import com.techxform.anywherematrimony.extensions.safeGet
 import com.techxform.anywherematrimony.helpers.event.EventObserver
+import com.techxform.anywherematrimony.view.activity.CompleteRegistration
 import com.techxform.anywherematrimony.viewmodel.AuthViewModel
 import com.techxform.anywherematrimony.viewmodel.FiltersViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
@@ -146,13 +151,11 @@ class SignUpFragmentBasicTwo : BaseFragment() {
 
         authViewModel.signUpOutput.observe(viewLifecycleOwner) {
             hideProgress()
-            it.userid?.let {
+            it.otp?.let { otp ->
                 Toast.makeText(context, "Signed Up successfully", Toast.LENGTH_SHORT).show()
-                showOtpBox(String.empty)
+                showOtpBox(otp)
 //                authViewModel.checkLogin(authViewModel.signUpInput.username.toString(),authViewModel.signUpInput.password.toString())
             } ?: run {
-                showOtpBox(String.empty)
-
                 Toast.makeText(context, "Something went wrong.. Try again after sometime", Toast.LENGTH_SHORT).show()
             }
         }
@@ -163,21 +166,26 @@ class SignUpFragmentBasicTwo : BaseFragment() {
         authViewModel.signUpInput.password = binding.passwordEt.text.toString()
     }
 
-    private fun showOtpBox(title: String) {
+    private fun showOtpBox(otpReceived: String) {
         val dialog = activity?.let { Dialog(it) }
         dialog?.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog?.setCancelable(false)
         dialog?.window?.setBackgroundDrawableResource(android.R.color.transparent);
         dialog?.setContentView(R.layout.otp_dialog)
-        /*val body = dialog.findViewById(R.id.body) as TextView
-        body.text = title
-        val yesBtn = dialog.findViewById(R.id.yesBtn) as Button
-        val noBtn = dialog.findViewById(R.id.noBtn) as TextView
-        yesBtn.setOnClickListener {
-            dialog.dismiss()
+        val otpView = dialog?.findViewById(R.id.otpView) as OtpTextView
+        otpView.otp = otpReceived
+        val submitBtn = dialog.findViewById(R.id.submitBtn) as AppCompatButton
+        submitBtn.setOnClickListener {
+            if (otpView.otp.equals(otpReceived)){
+                dialog.dismiss()
+                activity?.startActivity(Intent(activity,CompleteRegistration::class.java))
+                activity?.finish()
+            }
+            else{
+                otpView.otp = String.empty
+            }
         }
-        noBtn.setOnClickListener { dialog.dismiss() }*/
-        dialog?.show()
+        dialog.show()
 
     }
 

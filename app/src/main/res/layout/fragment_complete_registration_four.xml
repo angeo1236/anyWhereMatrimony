@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:grid="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            tools:context=".view.activity.SignUpActivity">
+
+            <TextView
+                android:id="@+id/personalDetailsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/pippins_bold"
+                android:gravity="center"
+                android:text="Partner preferences"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                grid:layout_constraintTop_toBottomOf="@+id/personalDetailsTv">
+
+                <TextView
+                    style="@style/completeRegistrationStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Complexion"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+                <com.techxform.anywherematrimony.utils.MultiSpinnerSearch
+                    android:id="@+id/complexionMultiSpinner"
+                    android:layout_width="match_parent"
+                    android:min="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    app:hintText="Select Complexion"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    />
+
+                <TextView
+                    style="@style/completeRegistrationStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Caste"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+                <com.techxform.anywherematrimony.utils.MultiSpinnerSearch
+                    android:id="@+id/casteMultiSpinner"
+                    android:layout_width="match_parent"
+                    android:min="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    app:hintText="Select Caste"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    />
+
+                <TextView
+                    style="@style/completeRegistrationStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Height"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+                <com.google.android.material.slider.RangeSlider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+                <TextView
+                    style="@style/completeRegistrationStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Weight"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+                <com.google.android.material.slider.RangeSlider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    style="@style/completeRegistrationStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Body type"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+                <com.techxform.anywherematrimony.utils.MultiSpinnerSearch
+                    android:id="@+id/bodyTypeMultiSpinner"
+                    android:layout_width="match_parent"
+                    android:min="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    app:hintText="Select Body Type"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    />
+
+                <TextView
+                    style="@style/completeRegistrationStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Physical status"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+                <com.techxform.anywherematrimony.utils.MultiSpinnerSearch
+                    android:id="@+id/physicalStatusMultiSpinner"
+                    android:layout_width="match_parent"
+                    android:min="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    app:hintText="Select Physical Status"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    />
+
+                <TextView
+                    style="@style/completeRegistrationStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Smoking"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+                <com.techxform.anywherematrimony.utils.MultiSpinnerSearch
+                    android:id="@+id/smokingMultiSpinner"
+                    android:layout_width="match_parent"
+                    android:min="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    app:hintText="Select Smoking Type"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    />
+
+                <TextView
+                    style="@style/completeRegistrationStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Diet"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+                <com.techxform.anywherematrimony.utils.MultiSpinnerSearch
+                    android:id="@+id/dietMultiSpinner"
+                    android:layout_width="match_parent"
+                    android:min="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    app:hintText="Select Diet"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    />
+
+                <TextView
+                    style="@style/completeRegistrationStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Occupation Category"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+                <com.techxform.anywherematrimony.utils.MultiSpinnerSearch
+                    android:id="@+id/occupationMultiSpinner"
+                    android:layout_width="match_parent"
+                    android:min="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    app:hintText="Select Occupation Category"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    />
+
+                <TextView
+                    style="@style/completeRegistrationStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Employed Category"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+                <com.techxform.anywherematrimony.utils.MultiSpinnerSearch
+                    android:id="@+id/employedCategoryMultiSpinner"
+                    android:layout_width="match_parent"
+                    android:min="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    app:hintText="Select Employed Category"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    />
+
+                <TextView
+                    style="@style/completeRegistrationStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Income Category"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+                <com.techxform.anywherematrimony.utils.MultiSpinnerSearch
+                    android:id="@+id/incomeMultiSpinner"
+                    android:layout_width="match_parent"
+                    android:min="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    app:hintText="Select Annual Income"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    />
+
+                <TextView
+                    style="@style/completeRegistrationStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Marital Status"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+                <com.techxform.anywherematrimony.utils.MultiSpinnerSearch
+                    android:id="@+id/maritalStatusMultiSpinner"
+                    android:layout_width="match_parent"
+                    android:min="@dimen/_40sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    app:hintText="Select Marital Status"
+                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:text="Submit"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/blue"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
+
+
+
+

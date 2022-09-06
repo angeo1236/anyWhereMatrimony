@@ -20,6 +20,7 @@ import com.techxform.anywherematrimony.R;
 import com.techxform.anywherematrimony.data.NavListModel;
 import com.techxform.anywherematrimony.view.activity.InterestListPage;
 import com.techxform.anywherematrimony.view.activity.ProfileListing;
+import com.techxform.anywherematrimony.view.activity.WebviewPage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +68,9 @@ public class NavListAdapter extends RecyclerView.Adapter<NavListAdapter.ViewHold
             } else if (position == 2) {
                 Intent intent = new Intent(activity1, ProfileListing.class);
                 intent.putExtra(IS_IN_WISHLIST,true);
+                activity1.startActivity(intent);
+            }else if (position == 5) {
+                Intent intent = new Intent(activity1, WebviewPage.class);
                 activity1.startActivity(intent);
             } /*else if (position == 2) {
                 Intent intent = new Intent(activity1, NotificationsPage.class);

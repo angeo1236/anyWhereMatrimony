@@ -1,5 +1,7 @@
 package com.techxform.anywherematrimony.data
 
+import java.io.Serializable
+
 class ProfileModel (
     var id : String? = null,
     var candidate_name : String? = null,
@@ -17,7 +19,7 @@ class ProfileModel (
     var created_at : String? = null,
     var admin_login_key : String? = null,
     var wishlistStatus : String? = null,
-)
+): Serializable
 
 /*
 {
@@ -36,5 +38,28 @@ class ProfileModel (
     "status": "1",
     "created_at": "2022-07-01 07:03:36",
     "admin_login_key": "",
+    "wishlistStatus": "Inactive"
+}*/
+/*
+{
+    "id": "18",
+    "candidate_name": "Rakesh",
+    "gender": "Male",
+    "age": "0",
+    "height": "5ft 6in - 167cm",
+    "weight": "79",
+    "religion": "hindu",
+    "caste": "Nair",
+    "education": null,
+    "image": "",
+    "willing_to_second_marriage": "0",
+    "status": "Active",
+    "admin_login_key": "",
+    "approved_or_rejected_all_images": "0",
+    "images_updated_at": null,
+    "complexion": "fair",
+    "marital_status": "UnMarried",
+    "education_category": "BCA",
+    "working_place": "Thrissur",
     "wishlistStatus": "Inactive"
 }*/

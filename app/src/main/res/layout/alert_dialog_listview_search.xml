@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/alertSearchEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:autofillHints="@string/type_to_search"
+        android:background="@drawable/default_border"
+        android:hint="@string/type_to_search"
+        android:inputType="text"
+        android:padding="5dp"
+        android:textSize="@dimen/_12ssp">
+
+        <requestFocus />
+    </EditText>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alertSearchEditText"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:gravity="center_horizontal">
+
+        <ListView
+            android:id="@+id/alertSearchListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:cacheColorHint="@null"
+            android:fadeScrollbars="true"
+            android:fastScrollEnabled="true"
+            android:textFilterEnabled="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/selectAllButton"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/grey_stroke_bg"
+            android:text="Select All"
+            android:textSize="@dimen/_10ssp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/clearAllButton"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/grey_stroke_bg"
+            android:text="Clear All"
+            android:textSize="@dimen/_10ssp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dialogSubmitButton"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/grey_stroke_bg"
+            android:text="Submit"
+            android:textSize="@dimen/_10ssp" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,13 +1,9 @@
 package com.techxform.anywherematrimony.viewmodel
 
-import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.techxform.anywherematrimony.data.BaseResultObject
-import com.techxform.anywherematrimony.data.LoginOutput
-import com.techxform.anywherematrimony.data.SignUpInput
-import com.techxform.anywherematrimony.data.SignUpOutput
+import com.techxform.anywherematrimony.data.*
 import com.techxform.anywherematrimony.network.ApiClient
 import com.techxform.anywherematrimony.network.ApiInterface
 import com.techxform.anywherematrimony.utils.AppPreferences
@@ -21,6 +17,9 @@ class AuthViewModel() : ViewModel() {
 
     private val _signUpOutput = MutableLiveData<SignUpOutput>()
     val signUpOutput: LiveData<SignUpOutput> = _signUpOutput
+
+    private val _registrationFiltersOutput = MutableLiveData<RegistrationFiltersOutput>()
+    val registrationFiltersOutput: LiveData<RegistrationFiltersOutput> = _registrationFiltersOutput
 
     var signUpInput = SignUpInput()
 
@@ -87,4 +86,32 @@ class AuthViewModel() : ViewModel() {
             }
         })
     }
+
+    fun getRegistrationFilters(){
+        val apiService = ApiClient.client?.create(ApiInterface::class.java)
+
+        val call = apiService?.getRegistrationFilters()
+        val URL = call?.request()?.url.toString()
+        println("Retrofit URL : $URL")
+        call?.enqueue(object : Callback<RegistrationFiltersOutput> {
+            override fun onResponse(
+                call: Call<RegistrationFiltersOutput>,
+                response: retrofit2.Response<RegistrationFiltersOutput>
+            ) {
+                if (response.code() == 200) {
+                    _registrationFiltersOutput.postValue(response.body())
+                }else{
+                    _registrationFiltersOutput.postValue( null)
+                }
+            }
+            override fun onFailure(
+                call: Call<RegistrationFiltersOutput>,
+                t: Throwable
+            ) {
+                _registrationFiltersOutput.postValue( null)
+
+            }
+        })
+    }
+
 }

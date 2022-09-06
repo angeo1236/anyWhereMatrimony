@@ -5,17 +5,16 @@
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="@dimen/_5sdp">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/chipNameTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/chips_bg_selector"
         android:gravity="center"
         android:minWidth="@dimen/_30sdp"
         android:minHeight="@dimen/_25sdp"
         android:paddingHorizontal="@dimen/_5sdp"
         android:text="Wishlist"
-        android:textColor="@color/chips_textcolor_selector"
+        android:textColor="@color/black"
         android:textSize="@dimen/_12ssp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

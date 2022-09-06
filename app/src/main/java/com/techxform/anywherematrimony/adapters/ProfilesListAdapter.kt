@@ -15,6 +15,7 @@ import com.techxform.anywherematrimony.data.ProfileModel
 import com.techxform.anywherematrimony.extensions.safeGet
 import com.techxform.anywherematrimony.utils.AppPreferences
 import com.techxform.anywherematrimony.view.activity.MainActivity
+import com.techxform.anywherematrimony.view.activity.SingleProfileView
 import java.util.ArrayList
 
 enum class ProfileListingType{
@@ -55,6 +56,7 @@ class ProfilesListAdapter(private val profileType : ProfileListingType) : Recycl
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        val context = holder.itemView.context
         if (holder is ProfileLongViewHolder){
             val item = arrayList[position]
             holder.nameTV.text = item.candidate_name.safeGet()
@@ -83,6 +85,12 @@ class ProfilesListAdapter(private val profileType : ProfileListingType) : Recycl
             Glide.with(holder.itemView.context).load(item.image).apply(options)
                 .into(holder.profileIV)
 
+        }
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context,SingleProfileView::class.java)
+            intent.putExtra("profile",arrayList[position])
+            context.startActivity(intent)
         }
     }
 

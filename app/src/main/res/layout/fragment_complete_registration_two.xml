@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:grid="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            tools:context=".view.activity.SignUpActivity">
+
+            <TextView
+                android:id="@+id/familyDetailsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/pippins_bold"
+                android:gravity="center"
+                android:text="Family details"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/familyNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                grid:layout_constraintTop_toBottomOf="@+id/familyDetailsTv">
+
+                <TextView
+                    style="@style/completeRegistrationStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Family Name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/familyNameEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="textEmailAddress"
+                    android:text=""
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/emailLabelTv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/familyStatusLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/familyNameLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Family Status"
+                    android:textColor="@color/blue"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mobileEt" />
+
+                <com.techxform.anywherematrimony.utils.RadioButtonList
+                    android:id="@+id/familyStatusRadioButtonList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fatherNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                grid:layout_constraintTop_toBottomOf="@+id/familyStatusLayout">
+
+                <TextView
+                    style="@style/completeRegistrationStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Father's Name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/fatherNameEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="textEmailAddress"
+                    android:text=""
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/emailLabelTv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fatherFamilyNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                grid:layout_constraintTop_toBottomOf="@+id/fatherNameLayout">
+
+                <TextView
+                    style="@style/completeRegistrationStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Father's Family Name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/fatherFamilyNameEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="textEmailAddress"
+                    android:text=""
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/emailLabelTv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fatherOccupationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                grid:layout_constraintTop_toBottomOf="@+id/fatherFamilyNameLayout">
+
+                <TextView
+                    style="@style/completeRegistrationStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Father's Occupation'"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/fatherOccupationEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="textEmailAddress"
+                    android:text=""
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/emailLabelTv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/motherNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                grid:layout_constraintTop_toBottomOf="@+id/fatherOccupationLayout">
+
+                <TextView
+                    style="@style/completeRegistrationStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Mother's Name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/motherNameEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="textEmailAddress"
+                    android:text=""
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/emailLabelTv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/motherFamilyNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                grid:layout_constraintTop_toBottomOf="@+id/motherNameLayout">
+
+                <TextView
+                    style="@style/completeRegistrationStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Mother's Family Name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/motherFamilyNameEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="textEmailAddress"
+                    android:text=""
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/emailLabelTv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/motherOccupationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                grid:layout_constraintTop_toBottomOf="@+id/motherFamilyNameLayout">
+
+                <TextView
+                    style="@style/completeRegistrationStyle"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Mother's Occupation'"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCreatedSpinner" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/motherOccupationEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="textEmailAddress"
+                    android:text=""
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/emailLabelTv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/siblingsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/motherOccupationLayout">
+
+                <TextView
+                    android:id="@+id/genderLabelTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Siblings"
+                    android:textColor="@color/blue"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mobileEt" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/siblingsRadioGroup"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/yesRadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Yes"
+                            android:textSize="12sp" />
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/noRadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="No"
+                            android:textSize="12sp" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/siblingsDetailsLayout"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Brothers Married"
+                        android:textColor="@color/blue"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileEt" />
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/brothersMarriedSpinner"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="textEmailAddress"
+                        android:minHeight="@dimen/_35sdp"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/emailLabelTv"
+                        grid:hintText="Select" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Brothers Unmarried"
+                        android:textColor="@color/blue"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileEt" />
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/brothersUnmarriedSpinner"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="textEmailAddress"
+                        android:minHeight="@dimen/_35sdp"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/emailLabelTv"
+                        grid:hintText="Select" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Sisters Married"
+                        android:textColor="@color/blue"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileEt" />
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/sistersMarriedSpinner"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="textEmailAddress"
+                        android:minHeight="@dimen/_35sdp"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/emailLabelTv"
+                        grid:hintText="Select" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Sisters Unmarried"
+                        android:textColor="@color/blue"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/mobileEt" />
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/sistersUnmarriedSpinner"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="textEmailAddress"
+                        android:minHeight="@dimen/_35sdp"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/emailLabelTv"
+                        grid:hintText="Select" />
+
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@color/blue"
+                    android:text="@string/next"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
+
+
+
+

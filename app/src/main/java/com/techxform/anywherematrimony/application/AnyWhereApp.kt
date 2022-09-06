@@ -5,6 +5,7 @@ import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.FormatStrategy
 import com.orhanobut.logger.Logger
 import com.orhanobut.logger.PrettyFormatStrategy
+import com.techxform.anywherematrimony.adapters.RadioButtonAdapter
 import com.techxform.anywherematrimony.utils.AppPreferences
 import com.techxform.anywherematrimony.utils.DataCaching
 import com.techxform.anywherematrimony.viewmodel.*
@@ -55,5 +56,7 @@ val authModule = module {
     viewModel { HomePageViewModel(get()) }
     viewModel { NotificationViewModel(get()) }
     viewModel { InterestViewModel(get()) }
+    viewModel { ProfileViewModel(get()) }
+    factory { RadioButtonAdapter() }
 
 }

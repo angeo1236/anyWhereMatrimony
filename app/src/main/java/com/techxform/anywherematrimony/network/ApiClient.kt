@@ -21,9 +21,9 @@ object ApiClient {
     val interceptor = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
     private val okHttpClient = OkHttpClient.Builder()
         .addNetworkInterceptor(interceptor)
-        .connectTimeout(30, TimeUnit.SECONDS) //Backend is really slow
-        .writeTimeout(30, TimeUnit.SECONDS)
-        .readTimeout(30, TimeUnit.SECONDS)
+        .connectTimeout(120, TimeUnit.SECONDS) //Backend is really slow
+        .writeTimeout(120, TimeUnit.SECONDS)
+        .readTimeout(120, TimeUnit.SECONDS)
         .build()
 
 
@@ -48,9 +48,9 @@ object ApiClient {
     fun getClientWithAuthorization(dataCaching: DataCaching): Retrofit?{
         val okHttpClientWithAuthorization = OkHttpClient.Builder()
             .addNetworkInterceptor(interceptor)
-            .connectTimeout(30, TimeUnit.SECONDS)
-            .writeTimeout(30, TimeUnit.SECONDS)
-            .readTimeout(30, TimeUnit.SECONDS)
+            .connectTimeout(120, TimeUnit.SECONDS)
+            .writeTimeout(120, TimeUnit.SECONDS)
+            .readTimeout(120, TimeUnit.SECONDS)
             .addInterceptor(Interceptor { chain ->
                 val builder = chain.request().newBuilder()
                 builder.header("Authorization1", dataCaching.getAccessToken().safeGet())

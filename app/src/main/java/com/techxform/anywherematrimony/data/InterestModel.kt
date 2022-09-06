@@ -11,6 +11,10 @@ class InterestModel (
     var image : String? = null
 )
 /*
+
+1-->accepted
+2-->rejected
+0-->pending
 {
     "id": "5",
     "fromId": "49",
